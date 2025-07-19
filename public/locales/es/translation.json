@@ -1,5 +1,27 @@
 {
   "greeting": "Hola, soy Nahuel",
   "projects": "Proyectos",
-  "contact": "Contactos"
+  "contact": "Contactos",
+  "about": {
+    "title": "Sobre mí",
+    "intro": "Soy un desarrollador apasionado por el diseño y la programación. Me enfoco en construir experiencias digitales modernas, rápidas y atractivas.",
+    "frontend": {
+      "title": "Frontend",
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, ."
+    },
+    "backend": {
+      "title": "Backend",
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, ."
+    }
+  },
+  "portfolio": {
+    "title": "Portafolio",
+    "description": "Explora algunos de los proyectos más recientes en los que trabajé.",
+    "items": {
+      "1": "Aplicación de ecommerce moderna",
+      "2": "Plataforma de reservas",
+      "3": "Dashboard administrativo",
+      "4": "Landing page interactiva"
+    }
+  }
 }

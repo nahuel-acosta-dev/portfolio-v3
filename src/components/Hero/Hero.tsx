@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 import "@/lib/i18n/client";
 
 const Hero = () => {
@@ -9,14 +10,28 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative h-[65vh] flex flex-col justify-center gap-4 bg-black overflow-visible"
+      className="relative h-[65vh] flex flex-col justify-center bg-black overflow-visible"
     >
-      {/* Rectángulo vertical decorativo */}
-      <div className="absolute right-60 top-[-10%]  h-[120%] w-[400px] bg-amber-500 translate-y-[20%] rounded-sm z-0 " />
+      <Image
+        src="/profile.png"
+        alt="Nahuel Acosta"
+        width={800}
+        height={700}
+        className="absolute object-cover rounded-md 
+    top-[-10%] translate-y-[20%] 
+    right-[5%] z-20
+    w-[280px] min-w-[240px] max-w-[340px] h-[110%]
+    sm:w-[360px] sm:right-[5%] sm:max-w-[400px]
+    md:w-[460px] md:right-[5%] md:max-w-[500px]
+    lg:w-[600px] lg:right-[5%]
+    xl:w-[760px] xl:right-[5%]
+  "
+        priority
+      />
 
       {/* Contenido */}
-      <div className="text-left text-amber-50 pl-36 z-10">
-        <h1 className="text-5xl sm:text-7xl font-extrabold leading-tight">
+      <div className="z-10 text-amber-50 px-6 sm:px-12 md:pl-20 lg:pl-36 text-left">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
           <span className="block">{t("hero.line1")}</span>
           <span className="block">{t("hero.line2")}</span>
           <span className="block">{t("hero.line3")}</span>

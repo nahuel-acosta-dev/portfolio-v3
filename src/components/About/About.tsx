@@ -2,25 +2,51 @@
 
 import { useTranslation } from "react-i18next";
 import "@/lib/i18n/client";
+import { Code, Server } from "lucide-react";
 
 const About = () => {
   const { t } = useTranslation();
 
   return (
     <section
-      id="hero"
-      className="relative h-[65vh] flex flex-col justify-center gap-4 bg-black overflow-visible"
+      id="about"
+      className="relative h-[100vh] flex flex-col text-black px-6 sm:px-12 md:px-24 "
     >
-      {/* Rectángulo vertical decorativo */}
-      <div className="absolute right-60 top-[-10%]  h-[120%] w-[400px] bg-amber-500 translate-y-[20%] rounded-sm z-0 " />
+      <div className="flex flex-col gap-36">
+        {/* Título principal */}
+        <div className="flex flex-col max-w-2xs mt-26">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-8">
+            {t("about.title")}
+          </h2>
+          <p className="text-base sm:text-lg ">{t("about.intro")}</p>
+        </div>
 
-      {/* Contenido */}
-      <div className="text-left text-amber-50 pl-36 z-10">
-        <h1 className="text-5xl sm:text-7xl font-extrabold leading-tight">
-          <span className="block">{t("hero.line1")}</span>
-          <span className="block">{t("hero.line2")}</span>
-          <span className="block">{t("hero.line3")}</span>
-        </h1>
+        {/* Sección frontend y backend */}
+        <div className="flex flex-col sm:flex-row gap-12 sm:gap-24">
+          {/* Frontend */}
+          <div className="flex-1">
+            <h3 className="text-2xl font-semibold mb-2">
+              {t("about.frontend.title")}
+            </h3>
+            <Code size={100} className="text-dark mb-4" />
+            <h4 className="text-2xl font-semibold mb-2">
+              {t("about.backend.title")}
+            </h4>
+            <p className="">{t("about.frontend.text")}</p>
+          </div>
+
+          {/* Backend */}
+          <div className="flex-1">
+            <h3 className="text-2xl font-semibold mb-2">
+              {t("about.backend.title")}
+            </h3>
+            <Server size={100} className="text-dark mb-4" />
+            <h4 className="text-2xl font-semibold mb-2">
+              {t("about.backend.title")}
+            </h4>
+            <p className="">{t("about.backend.text")}</p>
+          </div>
+        </div>
       </div>
     </section>
   );
