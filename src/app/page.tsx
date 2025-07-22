@@ -1,6 +1,11 @@
 import About from "@/components/About";
+import Cv from "@/components/Cv";
+import Education from "@/components/Education";
 import Hero from "@/components/Hero";
+import Me from "@/components/Me";
 import Portfolio from "@/components/Portfolio/Portfolio";
+import Skills from "@/components/Skills/Skills";
+import Work from "@/components/Work";
 
 export default function Home() {
   return (
@@ -10,6 +15,11 @@ export default function Home() {
           <Hero />
           <About />
           <Portfolio />
+          <Education />
+          <Skills />
+          <Work />
+          <Me />
+          <Cv />
         </main>
 
         <footer className="row-start-3 flex gap-6 items-center justify-center py-8 border-t border-gray-200">
