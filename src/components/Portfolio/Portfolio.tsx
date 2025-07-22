@@ -19,15 +19,13 @@ const Portfolio = () => {
       ref={containerRef}
     >
       {/* Bloque izquierdo */}
-      <div className="w-full md:w-1/2 flex flex-col gap-12 mt-32 z-10">
+      <div className="w-full md:w-3xl flex flex-col gap-12 mt-32 z-10">
         {/* Título y descripción */}
         <div>
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             {t("portfolio.title")}
           </h2>
-          <p className="text-base sm:text-lg text-amber-100">
-            {t("portfolio.description")}
-          </p>
+          <p className="text-base sm:text-lg ">{t("portfolio.description")}</p>
         </div>
 
         {/* Renglones numerados */}
@@ -40,10 +38,10 @@ const Portfolio = () => {
               }}
               onMouseEnter={() => setHoveredIndex(i)}
               onMouseLeave={() => setHoveredIndex(null)}
-              className="text-left text-xl sm:text-2xl font-semibold border-b border-amber-500 py-9 
+              className="text-left text-xl sm:text-2xl font-semibold border-b border-gray-500 py-9 
                 hover:bg-white/10 hover:text-amber-100 transition-colors duration-300 cursor-pointer rounded-sm relative"
             >
-              <span className="mr-2 text-amber-400">{`0${i}.`}</span>
+              <span className="mr-2  hover:text-amber-100">{`0${i}.`}</span>
               {t(`portfolio.items.${i}`)}
             </button>
           ))}
@@ -51,20 +49,25 @@ const Portfolio = () => {
       </div>
 
       {/* Imagen hover derecha */}
-      {hoveredIndex !== null && itemRefs.current[hoveredIndex - 1] && (
-        <Image
-          src="/profile.png"
-          alt="Nahuel Acosta"
-          width={600}
-          height={600}
-          className="absolute object-cover rounded-md z-[100]
-      w-[220px] sm:w-[300px] md:w-[360px] 
-      right-[24%] transition-all duration-300 opacity-100"
-          style={{
-            top: `${itemRefs.current[hoveredIndex - 1]!.offsetTop - -30}px`,
-          }}
-        />
-      )}
+      <div className="absolute right-[14%] pointer-events-none z-[100] w-[220px] sm:w-[300px] md:w-[360px]">
+        {[1, 2, 3, 4].map((i) => {
+          const ref = itemRefs.current[i - 1];
+          const top = ref ? ref.offsetTop + 30 : 0;
+
+          return (
+            <Image
+              key={i}
+              src="/profile.png"
+              alt={`Preview ${i}`}
+              width={600}
+              height={600}
+              className={`absolute object-cover rounded-md transition-opacity duration-500 
+                ${hoveredIndex === i ? "opacity-100" : "opacity-0"}`}
+              style={{ top: `${top}px`, right: `${i * 4}px` }}
+            />
+          );
+        })}
+      </div>
     </section>
   );
 };
