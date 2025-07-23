@@ -1,6 +1,12 @@
 {
   "greeting": "Hola, soy Nahuel",
   "projects": "Proyectos",
+  "hero": {
+    "line1": "Hola, soy",
+    "line2": "Nahuel Acosta",
+    "line3": "Desarrollador Full Stack apasionado por crear experiencias únicas.",
+    "downloadCV": "Descargar CV"
+  },
   "about": {
     "title": "Sobre mí",
     "intro": "Soy un desarrollador apasionado por el diseño y la programación. Me enfoco en construir experiencias digitales modernas, rápidas y atractivas.",

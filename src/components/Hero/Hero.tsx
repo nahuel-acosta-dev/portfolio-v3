@@ -30,12 +30,26 @@ const Hero = () => {
       />
 
       {/* Contenido */}
+      {/* Contenido */}
       <div className="z-10 text-amber-50 px-6 sm:px-12 md:pl-20 lg:pl-36 text-left">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
           <span className="block">{t("hero.line1")}</span>
-          <span className="block">{t("hero.line2")}</span>
-          <span className="block">{t("hero.line3")}</span>
+          <span className="block text-amber-100">{t("hero.line2")}</span>
+          <span className="block text-sm sm:text-base md:text-base mt-2 text-gray-300 max-w-md leading-relaxed">
+            {t("hero.line3")}
+          </span>
         </h1>
+
+        <div className="mt-6">
+          <a
+            href="/cv-nahuel-acosta.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-3 rounded-lg text-black font-semibold bg-amber-100 hover:bg-amber-200 hover:scale-105 transition-all duration-300 shadow-lg shadow-amber-100/30"
+          >
+            {t("hero.downloadCV")}
+          </a>
+        </div>
       </div>
     </section>
   );

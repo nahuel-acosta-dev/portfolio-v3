@@ -1,6 +1,12 @@
 {
   "greeting": "Hello, I'm Nahuel",
   "projects": "Projects",
+  "hero": {
+    "line1": "Hi, I'm",
+    "line2": "Nahuel Acosta",
+    "line3": "Full Stack Developer passionate about crafting unique experiences.",
+    "downloadCV": "Download CV"
+  },
   "contact": {
     "title": "Contact",
     "description": "Feel free to reach out for collaborations or just a friendly hello!",
