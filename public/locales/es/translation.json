@@ -1,7 +1,6 @@
 {
   "greeting": "Hola, soy Nahuel",
   "projects": "Proyectos",
-  "contact": "Contactos",
   "about": {
     "title": "Sobre mí",
     "intro": "Soy un desarrollador apasionado por el diseño y la programación. Me enfoco en construir experiencias digitales modernas, rápidas y atractivas.",
@@ -23,5 +22,26 @@
       "3": "Dashboard administrativo",
       "4": "Landing page interactiva"
     }
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "No dudes en escribirme para colaboraciones o simplemente saludar.",
+    "form": {
+      "name": "Tu nombre",
+      "email": "Tu correo electrónico",
+      "subject": "Asunto",
+      "message": "Tu mensaje",
+      "send": "Enviar mensaje",
+      "sending": "Enviando..."
+    },
+    "info": {
+      "name": "Nombre",
+      "address": "Dirección",
+      "phone": "Teléfono"
+    }
+  },
+  "education": {
+    "download": "Descargar CV",
+    "note": "Archivo PDF con mis estudios y experiencia laboral"
   }
 }

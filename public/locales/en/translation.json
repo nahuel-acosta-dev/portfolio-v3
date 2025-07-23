@@ -1,5 +1,25 @@
 {
   "greeting": "Hello, I'm Nahuel",
   "projects": "Projects",
-  "contact": "Contacts"
+  "contact": {
+    "title": "Contact",
+    "description": "Feel free to reach out for collaborations or just a friendly hello!",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Your Message",
+      "send": "Send Message",
+      "sending": "Sending..."
+    },
+    "info": {
+      "name": "Name",
+      "address": "Address",
+      "phone": "Phone"
+    }
+  },
+  "education": {
+    "download": "Download Resume",
+    "note": "PDF file with my education and work experience"
+  }
 }
