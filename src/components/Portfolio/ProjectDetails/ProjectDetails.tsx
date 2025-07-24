@@ -87,7 +87,7 @@ const ProjectDetail = ({ projectId, onBack }: Props) => {
       </div>
 
       {/* Dos imágenes en fila con animación */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4  hidden lg:grid">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -125,6 +125,7 @@ const ProjectDetail = ({ projectId, onBack }: Props) => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
+        className="hidden lg:block"
       >
         <Image
           src="/caja.jpg"

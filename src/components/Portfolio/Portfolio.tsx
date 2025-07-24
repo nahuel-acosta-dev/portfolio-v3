@@ -19,7 +19,7 @@ const Portfolio = () => {
   return (
     <section
       id="portfolio"
-      className="relative min-h-[90vh] flex bg-black text-amber-50 px-6 sm:px-12 md:px-24 overflow-visible"
+      className="relative min-h-[90vh] flex bg-black text-amber-50 px-6 sm:px-12 md:px-24 overflow-visible section-max"
       ref={containerRef}
     >
       {/* Bloque izquierdo */}
@@ -60,7 +60,7 @@ const Portfolio = () => {
             </div>
 
             {/* Imagenes flotantes a la derecha al hacer hover */}
-            <div className="absolute right-[14%] pointer-events-none z-[100] w-[220px] sm:w-[300px] md:w-[360px]">
+            <div className="absolute right-[14%] pointer-events-none z-[100] w-[220px] sm:w-[300px] md:w-[360px] hidden lg:grid">
               {[1, 2, 3, 4].map((i) => {
                 const ref = itemRefs.current[i - 1];
                 const top = ref ? ref.offsetTop + 30 : 0;

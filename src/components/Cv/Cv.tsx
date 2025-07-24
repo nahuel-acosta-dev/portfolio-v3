@@ -9,7 +9,7 @@ const Education = () => {
   return (
     <section
       id="about"
-      className="relative h-[30vh] flex flex-col text-black px-6 sm:px-12 md:px-24 "
+      className="relative h-[30vh] flex flex-col text-black px-6 sm:px-12 md:px-24 section-max"
     >
       <div className="my-auto flex flex-col items-center text-center">
         <a

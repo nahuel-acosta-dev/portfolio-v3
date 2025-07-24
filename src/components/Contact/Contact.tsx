@@ -21,7 +21,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative min-h-[90vh] flex bg-black text-gray-100 px-6 sm:px-12 md:px-24 overflow-visible"
+      className="relative min-h-[90vh] flex bg-black text-gray-100 px-6 sm:px-12 md:px-24 overflow-visible section-max"
     >
       <div className="w-full flex flex-col md:flex-row gap-16 mt-32 z-10">
         {/* Columna izquierda */}
@@ -53,7 +53,10 @@ const Contact = () => {
         </div>
 
         {/* Columna derecha - formulario */}
-        <form onSubmit={handleSubmit} className="w-full md:w-1/2 space-y-4">
+        <form
+          onSubmit={handleSubmit}
+          className="w-full md:w-1/2 space-y-4 pb-5"
+        >
           <input
             type="text"
             placeholder={t("contact.form.name")}

@@ -28,7 +28,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="relative min-h-[80vh] flex flex-col text-black px-6 sm:px-12 md:px-24 py-20 bg-white"
+      className="relative min-h-[80vh] flex flex-col text-black px-6 sm:px-12 md:px-24 py-20 bg-white section-max"
     >
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold mb-12">

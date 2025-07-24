@@ -10,7 +10,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative h-[100vh] flex flex-col text-black px-6 sm:px-12 md:px-24 "
+      className="relative min-h-screen flex flex-col text-black px-6 sm:px-12 md:px-24 section-max mb-5"
     >
       <div className="flex flex-col gap-36">
         {/* Título principal */}
@@ -18,7 +18,7 @@ const About = () => {
           <h2 className="text-3xl sm:text-4xl font-bold mb-8">
             {t("about.title")}
           </h2>
-          <p className="text-base sm:text-lg ">{t("about.intro")}</p>
+          <p className="text-base sm:text-lg">{t("about.intro")}</p>
         </div>
 
         {/* Sección frontend y backend */}

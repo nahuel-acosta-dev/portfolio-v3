@@ -36,7 +36,7 @@ const SkillBubble = ({
 
 const Skills = () => {
   return (
-    <section id="skills" className="bg-black text-white py-20 px-8">
+    <section id="skills" className="bg-black text-white py-20 px-8 section-max">
       <div className="max-w-6xl mx-auto flex flex-col gap-16">
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-4">Habilidades</h2>

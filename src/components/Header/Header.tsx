@@ -61,7 +61,7 @@ const Header = () => {
             </div>
 
             {/* Texto + redes a la derecha */}
-            <div className="w-full lg:w-1/2 p-10 flex flex-col justify-center items-start gap-6">
+            <div className="w-full lg:w-1/2 p-10 flex flex-col justify-center items-center md:items-start gap-6">
               <h2 className="text-3xl font-bold">Let’s Connect</h2>
               <p className="text-gray-300 max-w-md">
                 I’m always open to new opportunities, collaborations, or just a

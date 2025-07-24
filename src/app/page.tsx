@@ -11,10 +11,10 @@ import Work from "@/components/Work";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-white text-black overflow-x-hidden">
       <Header />
 
-      <div className="max-w-[70vw] mx-auto grid grid-rows-[auto_1fr_auto] min-h-screen gap-y-5">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-rows-[auto_1fr_auto] min-h-screen gap-y-5">
         <main className="row-start-2 flex flex-col">
           <Hero />
           <About />

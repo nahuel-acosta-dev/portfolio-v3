@@ -29,8 +29,8 @@ const Education = () => {
 
   return (
     <section
-      id="about"
-      className="relative h-[100vh] flex flex-col text-black px-6 sm:px-12 md:px-24 "
+      id="education"
+      className="relative min-h-screen flex flex-col text-black px-6 sm:px-12 md:px-24 section-max mb-5"
     >
       <div className="flex flex-col gap-36">
         <div className="flex flex-col max-w-2xs mt-26">

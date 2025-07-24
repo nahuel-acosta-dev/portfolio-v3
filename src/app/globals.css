@@ -24,3 +24,10 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+* {
+  box-sizing: border-box;
+}
+
+.section-max {
+  max-width: 90vw !important;
+}
