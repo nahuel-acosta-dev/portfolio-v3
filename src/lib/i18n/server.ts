@@ -5,7 +5,8 @@ import { getOptions } from "./config";
 
 export async function initI18nServer(lng: string, ns?: string | string[]) {
   const i18nInstance = createInstance();
-
+  const normalizedLng = Array.isArray(lng) ? lng[0] : lng;
+  const normalizedNs = Array.isArray(ns) ? ns[0] : ns;
   await i18nInstance
     .use(initReactI18next)
     .use(
@@ -14,7 +15,7 @@ export async function initI18nServer(lng: string, ns?: string | string[]) {
           import(`../../../public/locales/${language}/${namespace}.json`)
       )
     )
-    .init(getOptions(lng, ns));
+    .init(getOptions(normalizedLng, normalizedNs));
 
   return i18nInstance;
 }
