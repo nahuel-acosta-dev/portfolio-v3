@@ -2,12 +2,14 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 //import Cv from "@/components/Cv";
 import Education from "@/components/Education";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 //import Me from "@/components/Me";
 import Portfolio from "@/components/Portfolio/Portfolio";
 import Skills from "@/components/Skills/Skills";
 import Work from "@/components/Work";
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -27,10 +29,36 @@ export default function Home() {
           <Contact />
         </main>
 
-        <footer className="row-start-3 flex gap-6 items-center justify-center py-8 border-t border-gray-200">
-          <p className="text-sm text-gray-500">
+        <footer className="row-start-3 flex flex-col md:flex-row gap-4 md:gap-6 items-center justify-center py-8 border-t border-gray-200">
+          {/* Texto del footer */}
+          <p className="text-sm text-gray-500 text-center">
             © {new Date().getFullYear()} Nahuel Acosta
           </p>
+
+          {/* Redes sociales */}
+          <div className="flex gap-6">
+            <Link
+              href="https://www.linkedin.com/in/tu-linkedin"
+              target="_blank"
+              className="hover:text-blue-400 transition-colors"
+            >
+              <FaLinkedin size={24} />
+            </Link>
+            <Link
+              href="https://github.com/nahuel-acosta-dev"
+              target="_blank"
+              className="hover:text-gray-300 transition-colors"
+            >
+              <FaGithub size={24} />
+            </Link>
+            <Link
+              href="https://wa.me/541164729851"
+              target="_blank"
+              className="hover:text-green-400 transition-colors"
+            >
+              <FaWhatsapp size={24} />
+            </Link>
+          </div>
         </footer>
       </div>
     </div>
