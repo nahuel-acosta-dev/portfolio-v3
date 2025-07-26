@@ -3,19 +3,37 @@
 import { useTranslation } from "react-i18next";
 import "@/lib/i18n/client";
 import { useState } from "react";
+import { FaDownload } from "react-icons/fa";
 
 const Contact = () => {
   const { t } = useTranslation();
   const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const formEndpoint = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT!;
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    // Simulación de envío
-    setTimeout(() => {
-      setLoading(false);
-      alert("Mensaje enviado");
-    }, 1500);
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    const res = await fetch(formEndpoint, {
+      method: "POST",
+      body: data,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    setLoading(false);
+    if (res.ok) {
+      setSubmitted(true);
+      form.reset();
+    } else {
+      alert("Hubo un error al enviar el mensaje.");
+    }
   };
 
   return (
@@ -40,15 +58,22 @@ const Contact = () => {
             <p>
               <strong>{t("contact.info.name")}:</strong> Nahuel Acosta
             </p>
-
             <p>
               <strong>{t("contact.info.address")}:</strong> Buenos Aires,
               Argentina
             </p>
-
             <p>
-              <strong>{t("contact.info.phone")}:</strong> +54 9 11 6472-9851
+              <strong>{t("contact.info.email")}:</strong>{" "}
+              brianacostanahuel2000@gmail.com
             </p>
+            <a
+              href="/cv-nahuel-acosta.pdf" // Asegurate de poner tu archivo PDF en `public/`
+              download
+              className="inline-flex items-center gap-2 mt-6 px-5 py-3 bg-white text-black font-semibold rounded hover:bg-gray-200 hover:scale-105 transition-transform duration-300 w-fit shadow-md"
+            >
+              <FaDownload className="text-lg" />
+              {t("contact.downloadCv", "Descargar CV")}
+            </a>
           </div>
         </div>
 
@@ -59,28 +84,39 @@ const Contact = () => {
         >
           <input
             type="text"
+            name="name"
             placeholder={t("contact.form.name")}
             className="w-full px-4 py-2 rounded bg-gray-100 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-slate-500"
             required
           />
           <input
             type="email"
+            name="email"
             placeholder={t("contact.form.email")}
             className="w-full px-4 py-2 rounded bg-gray-100 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-slate-500"
             required
           />
           <input
             type="text"
+            name="subject"
             placeholder={t("contact.form.subject")}
             className="w-full px-4 py-2 rounded bg-gray-100 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-slate-500"
             required
           />
           <textarea
+            name="message"
             placeholder={t("contact.form.message")}
             className="w-full px-4 py-2 rounded bg-gray-100 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-slate-500"
             rows={5}
             required
           ></textarea>
+
+          {submitted && (
+            <p className="text-green-400">
+              {t("contact.form.success", "Mensaje enviado con éxito.")}
+            </p>
+          )}
+
           <button
             type="submit"
             disabled={loading}

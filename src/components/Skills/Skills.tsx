@@ -1,3 +1,5 @@
+"use client";
+
 import {
   FaHtml5,
   FaCss3Alt,
@@ -20,6 +22,8 @@ import {
   SiBootstrap,
   SiTypescript,
 } from "react-icons/si";
+import { useTranslation } from "react-i18next";
+import "@/lib/i18n/client";
 
 const SkillBubble = ({
   Icon,
@@ -35,14 +39,14 @@ const SkillBubble = ({
 );
 
 const Skills = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="skills" className="bg-black text-white py-20 px-8 section-max">
       <div className="max-w-6xl mx-auto flex flex-col gap-16">
         <div className="text-center">
-          <h2 className="text-4xl font-bold mb-4">Habilidades</h2>
-          <p className="text-amber-100">
-            Estas son las tecnologías con las que trabajo
-          </p>
+          <h2 className="text-4xl font-bold mb-4">{t("skills.title")}</h2>
+          <p className="text-amber-100">{t("skills.description")}</p>
         </div>
 
         {/* Frontend */}
@@ -76,7 +80,9 @@ const Skills = () => {
 
         {/* Otros */}
         <div>
-          <h3 className="text-2xl font-semibold mb-6 text-center">Otros</h3>
+          <h3 className="text-2xl font-semibold mb-6 text-center">
+            {t("skills.others")}
+          </h3>
           <div className="flex flex-wrap justify-center gap-6">
             <SkillBubble Icon={SiPostman} label="Postman" />
             <SkillBubble Icon={FaDocker} label="Docker" />

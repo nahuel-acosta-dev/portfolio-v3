@@ -5,8 +5,24 @@ import { FaBars, FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
+import { useTranslation } from "react-i18next";
+import "@/lib/i18n/client";
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
+
+  const sections = [
+    "home",
+    "about",
+    "portfolio",
+    "education",
+    "skills",
+    "work",
+    //"me",
+    //"cv",
+    "contact",
+  ];
 
   return (
     <>
@@ -37,24 +53,14 @@ const Header = () => {
             {/* Secciones a la izquierda */}
             <div className="w-full lg:w-1/2 p-10 flex justify-center items-center">
               <nav className="flex flex-col gap-6 text-2xl">
-                {[
-                  "Home",
-                  "About",
-                  "Portfolio",
-                  "Education",
-                  "Skills",
-                  "Work",
-                  "Me",
-                  "Cv",
-                  "Contact",
-                ].map((section) => (
+                {sections.map((section) => (
                   <a
                     key={section}
-                    href={`#${section.toLowerCase()}`}
+                    href={`#${section === "home" ? "hero" : section}`}
                     onClick={() => setIsOpen(false)}
                     className="hover:underline"
                   >
-                    {section}
+                    {t(`header.sections.${section}`)}
                   </a>
                 ))}
               </nav>
@@ -62,10 +68,9 @@ const Header = () => {
 
             {/* Texto + redes a la derecha */}
             <div className="w-full lg:w-1/2 p-10 flex flex-col justify-center items-center md:items-start gap-6">
-              <h2 className="text-3xl font-bold">Let’s Connect</h2>
+              <h2 className="text-3xl font-bold">{t("header.connect")}</h2>
               <p className="text-gray-300 max-w-md">
-                I’m always open to new opportunities, collaborations, or just a
-                friendly hello.
+                {t("header.description")}
               </p>
               <div className="flex gap-6 mt-2">
                 <Link
@@ -76,14 +81,14 @@ const Header = () => {
                   <FaLinkedin size={24} />
                 </Link>
                 <Link
-                  href="https://github.com/tu-github"
+                  href="https://github.com/nahuel-acosta-dev"
                   target="_blank"
                   className="hover:text-gray-300"
                 >
                   <FaGithub size={24} />
                 </Link>
                 <Link
-                  href="https://wa.me/5491112345678"
+                  href="https://wa.me/541164729851"
                   target="_blank"
                   className="hover:text-green-400"
                 >

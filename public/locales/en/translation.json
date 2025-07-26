@@ -1,12 +1,134 @@
 {
   "greeting": "Hello, I'm Nahuel",
   "projects": "Projects",
+  "header": {
+    "connect": "Let’s Connect",
+    "description": "I’m always open to new opportunities, collaborations, or just a friendly hello.",
+    "sections": {
+      "home": "Home",
+      "about": "About",
+      "portfolio": "Portfolio",
+      "education": "Education",
+      "skills": "Skills",
+      "work": "Work",
+      "me": "Me",
+      "cv": "Cv",
+      "contact": "Contact"
+    }
+  },
+
   "hero": {
     "line1": "Hi, I'm",
     "line2": "Nahuel Acosta",
     "line3": "Full Stack Developer passionate about crafting unique experiences.",
     "downloadCV": "Download CV"
   },
+  "about": {
+    "title": "About Me",
+    "intro": "I'm a Full Stack developer focused on the MERN stack. I enjoy building beautiful interfaces with React or Next.js, and developing solid backend logic. While JavaScript is my main strength, I also know Python and have explored Django. I've worked with Payload CMS and touched a bit of React Native.",
+    "frontend": {
+      "title": "Frontend",
+      "text": "I mainly work with React and Next.js to create clean, fast, and responsive interfaces. I focus on making designs not only visually appealing but also accessible and functional across all devices."
+    },
+    "backend": {
+      "title": "Backend",
+      "text": "I'm specialized in Node.js with Express and MongoDB, but also have experience with Python and Django. I enjoy designing efficient and scalable APIs. I've used Payload CMS in several projects and I'm familiar with JWT, authentication, and other common backend features."
+    }
+  },
+  "skills": {
+    "title": "SKills",
+    "description": "These are the technologies I work with",
+    "others": "Others"
+  },
+  "experience": {
+    "title": "Experience",
+    "items": [
+      {
+        "company": "Freelance",
+        "role": "Fullstack Developer",
+        "years": "2022 - Present",
+        "description": "Development of custom websites for clients from various industries using the MERN stack (MongoDB, Express, React, Node.js). Implementation of modern, responsive interfaces with Tailwind CSS. Integration of custom functionalities such as forms, admin panels, and authentication systems. Full project lifecycle management, from design to deployment."
+      },
+      {
+        "company": "Khemlabs",
+        "role": "Fullstack Developer",
+        "years": "2023 - Present",
+        "description": "Full-stack development of web applications using Next.js, React, Payload CMS, and MongoDB. Frontend development with TypeScript and state management using Redux. Backend development with Node.js and implementation of secure APIs with authentication and authorization. Integration of third-party APIs. Close collaboration with clients to identify and address their business needs. Version control with Git (Bitbucket/GitHub)."
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "intro": "I specialized as a Full Stack developer through various courses and I’m currently pursuing a Bachelor's Degree in Information Systems.",
+    "formal": {
+      "title": "Formal education",
+      "highschool": {
+        "title": "Technical Secondary School No.1 'Community of José C. Paz'",
+        "period": "2013 - 2019"
+      },
+      "university": {
+        "title": "National University of General Sarmiento",
+        "degree": "Bachelor's Degree in Information Systems",
+        "period": "2023 - 2028"
+      }
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "Explore some of the latest projects I've worked on.",
+      "items": {
+        "1": "Modern e-commerce application",
+        "2": "Booking platform",
+        "3": "Admin dashboard",
+        "4": "Interactive landing page"
+      },
+      "others": "Others"
+    },
+    "courses": {
+      "title": "Courses and certifications",
+      "items": [
+        {
+          "title": "Argentina Programa 2022",
+          "institution": "INTI",
+          "period": "2022 - 2023"
+        },
+        {
+          "title": "Oracle Next Education Program",
+          "institution": "Alura Latam",
+          "period": "2022 - 2023",
+          "link": "https://app.aluracursos.com/program/certificate/502b98ef-9dd2-47ed-9ab1-db44771e9219"
+        },
+        {
+          "title": "CS50's Web Programming with Python and JavaScript",
+          "institution": "Harvard / CS50",
+          "period": "2022",
+          "link": "https://courses.edx.org/certificates/51eb8ac069f54d1080de1ca39a05f96d"
+        },
+        {
+          "title": "Crash Course on Python",
+          "institution": "Google",
+          "period": "June 2022",
+          "link": "https://www.coursera.org/account/accomplishments/verify/B6XMNX2DQ8PG"
+        },
+        {
+          "title": "FullStack Web Programming Diploma",
+          "institution": "UTN FRRe",
+          "period": "April 2022"
+        },
+        {
+          "title": "Expert in Algorithm Development",
+          "institution": "Edutin Academy (Delaware)",
+          "period": "2021"
+        },
+        {
+          "title": "Designing web pages with Bootstrap",
+          "institution": "Coursera - Austral University",
+          "period": "2021",
+          "link": "https://www.coursera.org/account/accomplishments/verify/B6XMNX2DQ8PG"
+        }
+      ]
+    }
+  },
+
   "contact": {
     "title": "Contact",
     "description": "Feel free to reach out for collaborations or just a friendly hello!",
@@ -21,11 +143,11 @@
     "info": {
       "name": "Name",
       "address": "Address",
-      "phone": "Phone"
-    }
-  },
-  "education": {
+      "phone": "Phone",
+      "email": "Email"
+    },
     "download": "Download Resume",
-    "note": "PDF file with my education and work experience"
+    "note": "PDF file with my education and work experience",
+    "credential": "Ver credencial"
   }
 }

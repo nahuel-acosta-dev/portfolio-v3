@@ -10,11 +10,11 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative min-h-screen flex flex-col text-black px-6 sm:px-12 md:px-24 section-max mb-5"
+      className="relative mb-10 flex flex-col text-black px-6 sm:px-12 md:px-24 section-max justify-center lg:justify-start"
     >
-      <div className="flex flex-col gap-36">
+      <div className="flex flex-col gap-30">
         {/* Título principal */}
-        <div className="flex flex-col max-w-2xs mt-26">
+        <div className="flex flex-col max-w-4xs mt-26 lg:mt-0">
           <h2 className="text-3xl sm:text-4xl font-bold mb-8">
             {t("about.title")}
           </h2>
@@ -29,9 +29,7 @@ const About = () => {
               {t("about.frontend.title")}
             </h3>
             <Code size={100} className="text-dark mb-4" />
-            <h4 className="text-2xl font-semibold mb-2">
-              {t("about.backend.title")}
-            </h4>
+
             <p className="">{t("about.frontend.text")}</p>
           </div>
 
@@ -41,9 +39,7 @@ const About = () => {
               {t("about.backend.title")}
             </h3>
             <Server size={100} className="text-dark mb-4" />
-            <h4 className="text-2xl font-semibold mb-2">
-              {t("about.backend.title")}
-            </h4>
+
             <p className="">{t("about.backend.text")}</p>
           </div>
         </div>

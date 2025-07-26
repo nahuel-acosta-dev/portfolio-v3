@@ -15,8 +15,13 @@ module.exports = {
       animation: {
         "fade-in": "fadeIn 0.9s ease-in-out forwards",
         "fade-up": "fadeUp 0.6s ease-out forwards",
+        float: "float 4s ease-in-out infinite",
       },
       keyframes: {
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-12px)" },
+        },
         fadeIn: {
           "0%": { opacity: 0 },
           "100%": { opacity: 1 },

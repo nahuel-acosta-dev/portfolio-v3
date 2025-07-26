@@ -8,14 +8,26 @@ const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="hero" className="relative bg-black py-16 section-max">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center justify-between gap-10">
+    <section
+      id="hero"
+      className="relative section-max overflow-hidden sm:py-10"
+    >
+      <div className="absolute inset-0 hidden lg:block ">
+        <div className="h-[75%] bg-black" />
+        <div className="h-[25%] bg-transparent" />
+      </div>
+
+      {/* Fondo completamente negro para pantallas menores a lg */}
+      <div className="absolute inset-0 bg-black block lg:hidden pt-20 " />
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row justify-between gap-10 ">
         {/* Texto */}
-        <div className="z-10 text-amber-50 w-full lg:w-1/2 text-center lg:text-left">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight">
-            <span className="block">{t("hero.line1")}</span>
-            <span className="block text-amber-100">{t("hero.line2")}</span>
-            <span className="block text-sm sm:text-base text-gray-300 mt-2 leading-relaxed text-center lg:text-left">
+        <div className="z-10 text-amber-50 w-full lg:w-1/2 text-center md:mt-15 mb-5 mt-5">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-8xl font-light">
+            <span className="block  tracking-tight">{t("hero.line1")}</span>
+            <span className="block text-amber-100  tracking-tight">
+              {t("hero.line2")}
+            </span>
+            <span className="block text-sm sm:text-base text-gray-300 mt-2 leading-relaxed text-center">
               {t("hero.line3")}
             </span>
           </h1>
@@ -33,13 +45,14 @@ const Hero = () => {
         </div>
 
         {/* Imagen */}
-        <div className="w-full lg:w-1/2 flex justify-center">
+        <div className="w-full lg:w-1/2 flex justify-center  mt-5">
           <Image
-            src="/profile.png"
+            src="/portada.png"
             alt="Nahuel Acosta"
             width={500}
             height={500}
-            className="rounded-md object-cover w-[240px] sm:w-[300px] md:w-[400px] lg:w-[480px] xl:w-[520px] h-auto"
+            className="rounded-md object-cover w-[240px] sm:w-[300px] md:w-[400px] lg:w-[480px] xl:w-[520px] h-auto 
+      translate-y-0 md:translate-y-21 transition-transform duration-300"
             priority
           />
         </div>

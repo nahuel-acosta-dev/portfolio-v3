@@ -6,33 +6,25 @@ import "@/lib/i18n/client";
 const Experience = () => {
   const { t } = useTranslation();
 
-  const experiences = [
-    {
-      company: "Freelance",
-      role: "Desarrollador Fullstack",
-      years: "2021 - Actualidad",
-      description:
-        "Desarrollo de sitios web a medida para clientes de distintos rubros. Stack principal: React, Node.js, MongoDB, Tailwind.",
-      link: "https://tusitiofreelance.com", // opcional
-    },
-    {
-      company: "Mi Empresa Actual",
-      role: "Frontend Developer",
-      years: "2023 - Actualidad",
-      description:
-        "Encargado del desarrollo de interfaces para el panel administrativo y el sitio público. Uso intensivo de React, Next.js y Payload CMS.",
-      link: "https://empresa.com", // opcional
-    },
-  ];
+  const rawCourses = t("experience.items", { returnObjects: true });
 
+  const experiences = Array.isArray(rawCourses)
+    ? (rawCourses as {
+        company: string;
+        role: string;
+        years: string;
+        description: string;
+        link?: string;
+      }[])
+    : [];
   return (
     <section
-      id="experience"
+      id="work"
       className="relative min-h-[80vh] flex flex-col text-black px-6 sm:px-12 md:px-24 py-20 bg-white section-max"
     >
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold mb-12">
-          {t("experience.title") || "Experiencia"}
+          {t("experience.title")}
         </h2>
 
         <div className="flex flex-col gap-12">
@@ -40,7 +32,7 @@ const Experience = () => {
             <div
               key={index}
               className="p-6 border-l-4 border-black bg-gray-50 rounded-md shadow-sm 
-        hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+              hover:shadow-md hover:-translate-y-1 transition-all duration-300"
             >
               <h3 className="text-2xl font-bold text-gray-900">
                 {exp.company}

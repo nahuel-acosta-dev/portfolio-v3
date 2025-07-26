@@ -9,7 +9,7 @@ const Me = () => {
 
   return (
     <section
-      id="hero"
+      id="me"
       className="relative h-auto min-h-screen flex flex-col-reverse lg:flex-row justify-between bg-black px-6 sm:px-12 md:px-20 py-12 gap-10"
     >
       {/* Texto */}

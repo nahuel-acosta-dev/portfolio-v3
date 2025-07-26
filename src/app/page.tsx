@@ -1,10 +1,10 @@
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-import Cv from "@/components/Cv";
+//import Cv from "@/components/Cv";
 import Education from "@/components/Education";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Me from "@/components/Me";
+//import Me from "@/components/Me";
 import Portfolio from "@/components/Portfolio/Portfolio";
 import Skills from "@/components/Skills/Skills";
 import Work from "@/components/Work";
@@ -22,8 +22,8 @@ export default function Home() {
           <Education />
           <Skills />
           <Work />
-          <Me />
-          <Cv />
+          {/*<Me />*/}
+          {/*<Cv />*/}
           <Contact />
         </main>
 

@@ -1,6 +1,21 @@
 {
   "greeting": "Hola, soy Nahuel",
   "projects": "Proyectos",
+  "header": {
+    "connect": "Conectemos",
+    "description": "Siempre estoy abierto a nuevas oportunidades, colaboraciones o simplemente charlar.",
+    "sections": {
+      "home": "Inicio",
+      "about": "Sobre mí",
+      "portfolio": "Portafolio",
+      "education": "Educación",
+      "skills": "Habilidades",
+      "work": "Experiencia",
+      "me": "Yo",
+      "cv": "CV",
+      "contact": "Contacto"
+    }
+  },
   "hero": {
     "line1": "Hola, soy",
     "line2": "Nahuel Acosta",
@@ -9,26 +24,50 @@
   },
   "about": {
     "title": "Sobre mí",
-    "intro": "Soy un desarrollador apasionado por el diseño y la programación. Me enfoco en construir experiencias digitales modernas, rápidas y atractivas.",
+    "intro": "Soy desarrollador Full Stack con enfoque en el stack MERN. Disfruto construir interfaces atractivas con React o Next.js, y también desarrollar lógica robusta del lado del servidor. Aunque mi fuerte está en JavaScript, tengo conocimientos en Python y he explorado Django. También he trabajado con Payload CMS y React Native.",
     "frontend": {
       "title": "Frontend",
-      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, ."
+      "text": "Trabajo principalmente con React y Next.js para crear interfaces limpias, rápidas y responsivas. Me enfoco en que el diseño no solo sea visualmente atractivo, sino también accesible y funcional en todo tipo de dispositivos."
     },
     "backend": {
       "title": "Backend",
-      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, ."
+      "text": "Me especializo en Node.js con Express y MongoDB, pero también tengo experiencia con Python y Django. Me gusta diseñar APIs eficientes y escalables. He utilizado Payload CMS en varios proyectos y estoy familiarizado con JWT, autenticación y otras funcionalidades comunes del lado servidor."
     }
+  },
+  "experience": {
+    "title": "Experiencia",
+    "items": [
+      {
+        "company": "Freelance",
+        "role": "Desarrollador Fullstack",
+        "years": "2022 - Actualidad",
+        "description": "Desarrollo de sitios web personalizados para clientes de distintos sectores, utilizando tecnologías del stack MERN (MongoDB, Express, React, Node.js). Diseño e implementación de interfaces modernas con Tailwind CSS. Integración de funcionalidades específicas según los requerimientos del cliente, incluyendo formularios, paneles administrativos y sistemas de autenticación. Gestión integral de los proyectos, desde el diseño hasta el despliegue final."
+      },
+      {
+        "company": "Khemlabs",
+        "role": "Desarrollador Fullstack",
+        "years": "2023 - Actualidad",
+        "description": "Desarrollo de aplicaciones web completas utilizando React y Next.js con TypeScript. Implementación de APIs y lógica de negocio en Node.js. Manejo de estado con Redux, control de versiones con Git (Bitbucket/GitHub) y uso de Payload CMS como Headless CMS. Aplicación de medidas de seguridad como autenticación y autorización. Comunicación directa con clientes para identificar y resolver necesidades técnicas en sus sitios web."
+      }
+    ]
+  },
+  "skills": {
+    "title": "Habilidades",
+    "description": "Estas son las tecnologías con las que trabajo",
+    "others": "Otros"
   },
   "portfolio": {
     "title": "Portafolio",
-    "description": "Explora algunos de los proyectos más recientes en los que trabajé.",
+    "description": "Explora algunos de los proyectos más recientes en los que he trabajado.",
     "items": {
-      "1": "Aplicación de ecommerce moderna",
+      "1": "Aplicación de comercio electrónico moderna",
       "2": "Plataforma de reservas",
-      "3": "Dashboard administrativo",
+      "3": "Panel de administración",
       "4": "Landing page interactiva"
-    }
+    },
+    "others": "Otros"
   },
+
   "contact": {
     "title": "Contacto",
     "description": "No dudes en escribirme para colaboraciones o simplemente saludar.",
@@ -43,11 +82,72 @@
     "info": {
       "name": "Nombre",
       "address": "Dirección",
-      "phone": "Teléfono"
+      "phone": "Teléfono",
+      "email": "Email"
     }
   },
   "education": {
+    "title": "Educación",
+    "intro": "Me especialicé como desarrollador Full Stack realizando diversos cursos y actualmente me encuentro cursando la Licenciatura en Sistemas.",
+    "formal": {
+      "title": "Educacion formal",
+      "highschool": {
+        "title": "Escuela de Educación Secundaria Técnica N°1 'Comunidad de José C. Paz'",
+        "period": "2013 - 2019"
+      },
+      "university": {
+        "title": "Universidad Nacional de General Sarmiento",
+        "degree": "Licenciatura en Sistemas",
+        "period": "2023 - 2028"
+      }
+    },
+    "courses": {
+      "title": "Cursos y certificaciones",
+      "items": [
+        {
+          "title": "Argentina Programa 2022",
+          "institution": "INTI",
+          "period": "2022 - 2023"
+        },
+        {
+          "title": "Programa Oracle Next Education",
+          "institution": "Alura Latam",
+          "period": "2022 - 2023",
+          "link": "https://app.aluracursos.com/program/certificate/502b98ef-9dd2-47ed-9ab1-db44771e9219"
+        },
+
+        {
+          "title": "CS50's Web Programming with Python and JavaScript",
+          "institution": "Harvard / CS50",
+          "period": "2022",
+          "link": "https://courses.edx.org/certificates/51eb8ac069f54d1080de1ca39a05f96d"
+        },
+        {
+          "title": "Crash Course on Python",
+          "institution": "Google",
+          "period": "Junio 2022",
+          "link": "https://www.coursera.org/account/accomplishments/verify/B6XMNX2DQ8PG"
+        },
+        {
+          "title": "Diplomatura en Programación Web FullStack",
+          "institution": "UTN FRRe",
+          "period": "Abril 2022"
+        },
+        {
+          "title": "Experto en Desarrollo de Algoritmos",
+          "institution": "Edutin Academy (Delaware)",
+          "period": "2021"
+        },
+        {
+          "title": "Diseñando páginas web con Bootstrap",
+          "institution": "Coursera - universidad austral",
+          "period": "2021",
+          "link": "https://www.coursera.org/account/accomplishments/verify/B6XMNX2DQ8PG"
+        }
+      ]
+    },
     "download": "Descargar CV",
-    "note": "Archivo PDF con mis estudios y experiencia laboral"
+    "note": "Archivo PDF con mis estudios y experiencia laboral",
+    "credential": "View credential"
   }
 }

@@ -8,14 +8,14 @@ const Education = () => {
 
   return (
     <section
-      id="about"
+      id="cv"
       className="relative h-[30vh] flex flex-col text-black px-6 sm:px-12 md:px-24 section-max"
     >
       <div className="my-auto flex flex-col items-center text-center">
         <a
           href="/CV_Nahuel_Acosta.pdf"
           download
-          className="text-xl :text-6xl font-semibold text-black underline underline-offset-8 decoration-gray-400 hover:decoration-black transition-all duration-300"
+          className="sm:text-4xl md:text-6xl font-semibold text-black underline underline-offset-8 decoration-gray-400 hover:decoration-black transition-all duration-300"
         >
           {t("education.download")}
         </a>
