@@ -67,7 +67,7 @@ const Contact = () => {
               brianacostanahuel2000@gmail.com
             </p>
             <a
-              href="/cv-nahuel-acosta.pdf" // Asegurate de poner tu archivo PDF en `public/`
+              href="/cv-nahuel-acosta.pdf"
               download
               className="inline-flex items-center gap-2 mt-6 px-5 py-3 bg-white text-black font-semibold rounded hover:bg-gray-200 hover:scale-105 transition-transform duration-300 w-fit shadow-md"
             >

@@ -3,21 +3,35 @@ import { useState } from "react";
 
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
-  const [ok, setOk] = useState<boolean | null>(null);
+  const [submitted, setSubmitted] = useState(false);
 
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  const formEndpoint = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT!;
+
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    setOk(null);
-    const form = new FormData(e.currentTarget);
-    const res = await fetch("/api/contact", { method: "POST", body: form });
-    setOk(res.ok);
+    setSubmitted(false);
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    const res = await fetch(formEndpoint, {
+      method: "POST",
+      body: data,
+      headers: { Accept: "application/json" },
+    });
+
     setLoading(false);
-  }
+    if (res.ok) {
+      setSubmitted(true);
+      form.reset();
+    } else {
+      alert("Hubo un error al enviar el mensaje.");
+    }
+  };
 
   return (
     <section id="contact" className="section-padding">
-      {/* mismo wrapper que el card interior */}
       <div className="mx-auto max-w-6xl px-4 md:px-8">
         <div className="text-center">
           <h3 className="font-heading text-5xl md:text-6xl">
@@ -25,7 +39,6 @@ export default function ContactForm() {
           </h3>
         </div>
 
-        {/* form centrado y angosto como el demo */}
         <form
           onSubmit={onSubmit}
           className="mx-auto mt-10 grid w-full max-w-3xl gap-4 md:grid-cols-2"
@@ -61,21 +74,30 @@ export default function ContactForm() {
             rows={6}
             className="col-span-full w-full rounded-md bg-white/10 px-3 py-3 outline-none ring-1 ring-white/10 focus:ring-accent"
           />
+
+          {/* honeypot opcional anti‑bots */}
+          <input
+            type="text"
+            name="_gotcha"
+            className="hidden"
+            tabIndex={-1}
+            autoComplete="off"
+          />
+
           <div className="col-span-full text-center">
             <button
+              type="submit"
               disabled={loading}
-              className="inline-flex items-center gap-3 rounded-full bg-brand-500 px-6 py-3"
+              className="inline-flex items-center gap-3 rounded-full bg-brand-500 px-6 py-3 disabled:opacity-60"
             >
               <span>{loading ? "Sending..." : "Send Message"}</span>
               <span className="inline-grid h-9 w-9 place-items-center rounded-full bg-white text-black">
                 →
               </span>
             </button>
-            {ok === true && (
+
+            {submitted && (
               <p className="mt-3 text-green-400">Message sent ✅</p>
-            )}
-            {ok === false && (
-              <p className="mt-3 text-red-400">Error sending message ❌</p>
             )}
           </div>
         </form>
