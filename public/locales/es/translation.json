@@ -19,7 +19,9 @@
   "hero": {
     "line1": "Hola, soy",
     "line2": "Nahuel Acosta",
-    "line3": "Desarrollador Full Stack apasionado por crear experiencias únicas.",
+    "line3": "Desarrollador Web Full-Stack ",
+    "line4": "Te ayudare a convertir tus ideas en experiencias digitales únicas, creando aplicaciones y sitios web funcionales, modernos y escalables que reflejan su esencia y potencian sus proyectos.",
+    "viewWorks": "Ver proyectos",
     "downloadCV": "Descargar CV"
   },
   "about": {
@@ -49,7 +51,13 @@
         "years": "2023 - Actualidad",
         "description": "Desarrollo de aplicaciones web completas utilizando React y Next.js con TypeScript. Implementación de APIs y lógica de negocio en Node.js. Manejo de estado con Redux, control de versiones con Git (Bitbucket/GitHub) y uso de Payload CMS como Headless CMS. Aplicación de medidas de seguridad como autenticación y autorización. Comunicación directa con clientes para identificar y resolver necesidades técnicas en sus sitios web."
       }
-    ]
+    ],
+    "item": {
+      "company": "Khemlabs",
+      "role": "Desarrollador Fullstack",
+      "years": "2023 - Actualidad",
+      "description": "Desarrollo de aplicaciones web completas utilizando React y Next.js con TypeScript. Implementación de APIs y lógica de negocio en Node.js. Manejo de estado con Redux, control de versiones con Git (Bitbucket/GitHub) y uso de Payload CMS como Headless CMS. Aplicación de medidas de seguridad como autenticación y autorización. Comunicación directa con clientes para identificar y resolver necesidades técnicas en sus sitios web."
+    }
   },
   "skills": {
     "title": "Habilidades",
@@ -58,12 +66,14 @@
   },
   "portfolio": {
     "title": "Portafolio",
+    "latestProjects": "Últimos proyectos",
     "description": "Explora algunos de los proyectos más recientes en los que he trabajado.",
     "items": {
-      "1": "Aplicación de comercio electrónico moderna",
-      "2": "Plataforma de reservas",
-      "3": "Panel de administración",
-      "4": "Landing page interactiva"
+      "erickMagne": "Erick Magne contratista"
+    },
+    "category": {
+      "*": "Todas",
+      "web": "Landing Pages con CMS (personalizables)"
     },
     "others": "Otros"
   },
@@ -122,27 +132,11 @@
           "period": "2022",
           "link": "https://courses.edx.org/certificates/51eb8ac069f54d1080de1ca39a05f96d"
         },
-        {
-          "title": "Crash Course on Python",
-          "institution": "Google",
-          "period": "Junio 2022",
-          "link": "https://www.coursera.org/account/accomplishments/verify/B6XMNX2DQ8PG"
-        },
+
         {
           "title": "Diplomatura en Programación Web FullStack",
           "institution": "UTN FRRe",
           "period": "Abril 2022"
-        },
-        {
-          "title": "Experto en Desarrollo de Algoritmos",
-          "institution": "Edutin Academy (Delaware)",
-          "period": "2021"
-        },
-        {
-          "title": "Diseñando páginas web con Bootstrap",
-          "institution": "Coursera - universidad austral",
-          "period": "2021",
-          "link": "https://www.coursera.org/account/accomplishments/verify/B6XMNX2DQ8PG"
         }
       ]
     },

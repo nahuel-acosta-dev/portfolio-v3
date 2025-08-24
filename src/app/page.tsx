@@ -1,7 +1,9 @@
+"use client";
 //import Me from "@/components/Me";
+
 import Image from "next/image";
 import HeroV2 from "@/components/HeroV2";
-import Achievements from "@/components/Achievements";
+//import Achievements from "@/components/Achievements";
 import SkillsV2 from "@/components/SkillsV2";
 import Timeline from "@/ui/Timeline";
 import InterestsEducation from "@/components/InterestsEducation";
@@ -9,11 +11,21 @@ import PortfolioV2 from "@/components/PortfolioV2/PortfolioV2";
 //import Testimonials from "@/components/Testimonials";
 import ContactForm from "@/components/ContactForm";
 import FooterV2 from "@/components/FooterV2/FooterV2";
+import { Reveal, Stagger } from "@/components/Reveal/Reveal";
+import { useTranslation } from "react-i18next";
+import "@/lib/i18n/client";
 
 export default function Home() {
+  const { t } = useTranslation();
+
   return (
     <main>
-      <HeroV2 />
+      <div id="hero" className="scroll-mt-24 md:scroll-mt-28">
+        {/* héroe entra con fadeUp al montar */}
+        <Reveal>
+          <HeroV2 />
+        </Reveal>
+      </div>
 
       <section className="relative">
         {/* patrón centrado */}
@@ -21,39 +33,78 @@ export default function Home() {
           <Image
             src="/bg-pattern.png"
             alt=""
-            width={1100} // ajusta si hace falta
+            width={1100}
             height={300}
             className="opacity-80"
             priority
           />
         </div>
 
-        {/* card principal */}
         <div className="mx-auto -mt-16 max-w-7xl rounded-3xl border border-white/20 bg-white/5 shadow-[0_12px_90px_rgba(106,30,188,0.25)]">
-          {/* ⬇️ Achievements centrado y con padding lateral */}
-          <div className="mx-auto max-w-5xl px-4 md:px-8">
+          {/* Achievements */}
+          {/*<Reveal className="mx-auto max-w-5xl px-4 md:px-8">
             <Achievements />
-          </div>
+          </Reveal>*/}
 
-          {/* ⬇️ usa el mismo wrapper en el resto para que todo “respire” igual */}
-          <div className="mx-auto grid max-w-6xl gap-16 px-4 pb-24 pt-0 md:px-8 lg:grid-cols-2">
-            <Timeline />
-            <SkillsV2 />
-          </div>
+          {/* CV: dos columnas con stagger (cada hijo hace fadeUp) */}
+          <Stagger>
+            <div
+              id="me"
+              className="mx-auto grid max-w-6xl gap-16 px-4 pb-24 pt-0 md:px-8 lg:grid-cols-2 scroll-mt-24 md:scroll-mt-28 mt-20"
+            >
+              <Reveal>
+                <Timeline />
+              </Reveal>
+              <Reveal delay={0.12}>
+                <SkillsV2 />
+              </Reveal>
+            </div>
+          </Stagger>
 
-          <div className="mx-auto grid max-w-6xl gap-16 px-4 pb-24 pt-0 md:px-8 lg:grid-cols-2">
-            <InterestsEducation />
-          </div>
+          {/* Interests/Education en stagger también */}
+          <Stagger>
+            <div
+              className="mx-auto grid max-w-6xl gap-16 px-4 pb-24 pt-0 md:px-8 lg:grid-cols-2"
+              suppressHydrationWarning
+            >
+              <InterestsEducation />
+            </div>
+          </Stagger>
 
-          <div className="mx-auto max-w-6xl px-4 md:px-8">
-            <PortfolioV2 />
-            {/* <Testimonials /> */}
-          </div>
+          {/* CTA CV */}
+          <Reveal className="mx-auto max-w-6xl px-4 md:px-8">
+            <div className="flex justify-center">
+              <a
+                href="/cv-nahuel-acosta.pdf"
+                download
+                aria-label="Download CV - Nahuel Acosta"
+                className="group inline-flex items-center gap-3 rounded-full bg-brand-500/90 px-6 py-3 text-white ring-1 ring-white/10 transition-all hover:bg-brand-500 hover:shadow-[0_12px_60px_rgba(106,30,188,0.35)] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              >
+                <span className="font-medium">{t("hero.downloadCV")}</span>
+                <span className="inline-grid h-9 w-9 place-items-center rounded-full bg-white text-black transition-transform group-hover:translate-x-0.5">
+                  ↓
+                </span>
+              </a>
+            </div>
+          </Reveal>
+
+          {/* Portfolio */}
+          <Reveal className="mx-auto max-w-6xl px-4 md:px-8">
+            <div id="portfolio" className="scroll-mt-24 md:scroll-mt-28">
+              <PortfolioV2 />
+            </div>
+          </Reveal>
         </div>
       </section>
 
-      <ContactForm />
-      <FooterV2 />
+      {/* Contact */}
+      <Reveal>
+        <ContactForm />
+      </Reveal>
+
+      <Reveal>
+        <FooterV2 />
+      </Reveal>
     </main>
   );
 }

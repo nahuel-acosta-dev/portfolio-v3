@@ -1,9 +1,11 @@
 "use client";
 import { useState } from "react";
-
+import { useTranslation } from "react-i18next";
+import "@/lib/i18n/client";
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const { t } = useTranslation();
 
   const formEndpoint = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT!;
 
@@ -35,7 +37,8 @@ export default function ContactForm() {
       <div className="mx-auto max-w-6xl px-4 md:px-8">
         <div className="text-center">
           <h3 className="font-heading text-5xl md:text-6xl">
-            Let’s collaborate & design<span className="text-accent">.</span>
+            {t("contact.title", "Contact")}
+            <span className="text-accent">.</span>
           </h3>
         </div>
 
@@ -45,31 +48,31 @@ export default function ContactForm() {
         >
           <input
             name="name"
-            placeholder="Full Name*"
+            placeholder={t("contact.form.name")}
             required
             className="w-full rounded-md bg-white/10 px-3 py-3 outline-none ring-1 ring-white/10 focus:ring-accent"
           />
           <input
             type="email"
             name="email"
-            placeholder="Email*"
+            placeholder={`${t("contact.form.email")}*`}
             required
             className="w-full rounded-md bg-white/10 px-3 py-3 outline-none ring-1 ring-white/10 focus:ring-accent"
           />
           <input
             type="tel"
             name="phone"
-            placeholder="Phone"
+            placeholder={`${t("contact.info.phone")}`}
             className="w-full rounded-md bg-white/10 px-3 py-3 outline-none ring-1 ring-white/10 focus:ring-accent"
           />
           <input
             name="subject"
-            placeholder="Subject"
+            placeholder={t("contact.form.subject")}
             className="w-full rounded-md bg-white/10 px-3 py-3 outline-none ring-1 ring-white/10 focus:ring-accent"
           />
           <textarea
             name="message"
-            placeholder="Message"
+            placeholder={t("contact.form.message")}
             required
             rows={6}
             className="col-span-full w-full rounded-md bg-white/10 px-3 py-3 outline-none ring-1 ring-white/10 focus:ring-accent"
@@ -90,14 +93,19 @@ export default function ContactForm() {
               disabled={loading}
               className="inline-flex items-center gap-3 rounded-full bg-brand-500 px-6 py-3 disabled:opacity-60"
             >
-              <span>{loading ? "Sending..." : "Send Message"}</span>
+              <span>
+                {loading ? t("contact.form.sending") : t("contact.form.send")}
+              </span>
               <span className="inline-grid h-9 w-9 place-items-center rounded-full bg-white text-black">
                 →
               </span>
             </button>
 
             {submitted && (
-              <p className="mt-3 text-green-400">Message sent ✅</p>
+              <p className="mt-3 text-green-400">
+                {" "}
+                {t("contact.form.success", "Mensaje enviado con éxito.")}
+              </p>
             )}
           </div>
         </form>

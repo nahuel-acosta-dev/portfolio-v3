@@ -21,6 +21,8 @@
     "line1": "Hi, I'm",
     "line2": "Nahuel Acosta",
     "line3": "Full Stack Developer passionate about crafting unique experiences.",
+    "line4": "I help you turn your ideas into unique digital experiences, creating functional, modern, and scalable applications and websites that reflect your essence and enhance your projects.",
+    "viewWorks": "View Works",
     "downloadCV": "Download CV"
   },
   "about": {
@@ -74,12 +76,14 @@
     },
     "portfolio": {
       "title": "Portfolio",
+      "latestProjects": "Latest Projects",
       "description": "Explore some of the latest projects I've worked on.",
       "items": {
-        "1": "Modern e-commerce application",
-        "2": "Booking platform",
-        "3": "Admin dashboard",
-        "4": "Interactive landing page"
+        "erickMagne": "Erick Magne contractor"
+      },
+      "category": {
+        "*": "All",
+        "web": "Landing Pages with CMS (customizable)"
       },
       "others": "Others"
     },
@@ -103,27 +107,11 @@
           "period": "2022",
           "link": "https://courses.edx.org/certificates/51eb8ac069f54d1080de1ca39a05f96d"
         },
-        {
-          "title": "Crash Course on Python",
-          "institution": "Google",
-          "period": "June 2022",
-          "link": "https://www.coursera.org/account/accomplishments/verify/B6XMNX2DQ8PG"
-        },
+
         {
           "title": "FullStack Web Programming Diploma",
           "institution": "UTN FRRe",
           "period": "April 2022"
-        },
-        {
-          "title": "Expert in Algorithm Development",
-          "institution": "Edutin Academy (Delaware)",
-          "period": "2021"
-        },
-        {
-          "title": "Designing web pages with Bootstrap",
-          "institution": "Coursera - Austral University",
-          "period": "2021",
-          "link": "https://www.coursera.org/account/accomplishments/verify/B6XMNX2DQ8PG"
         }
       ]
     }

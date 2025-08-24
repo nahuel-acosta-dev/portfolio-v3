@@ -78,3 +78,6 @@ body {
 .image-zoom:hover img {
   transform: scale(1.06);
 }
+html {
+  scroll-behavior: smooth;
+}

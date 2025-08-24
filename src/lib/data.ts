@@ -3,44 +3,16 @@ export type Project = {
   title: string;
   category: "logo" | "web" | "mobile";
   image: string;
+  link: string;
 };
 
 export const projects: Project[] = [
   {
     id: "p1",
-    title: "Ecommerce site Website Template",
+    title: "erickMagne",
     category: "web",
     image: "/project1.jpg",
-  },
-  {
-    id: "p2",
-    title: "CryptoCode Crypto currency template",
-    category: "logo",
-    image: "/project2.jpg",
-  },
-  {
-    id: "p3",
-    title: "Modish Fashion Store Website",
-    category: "web",
-    image: "/project3.jpg",
-  },
-  {
-    id: "p4",
-    title: "DashLite Admin dashboard Figma",
-    category: "logo",
-    image: "/project4.jpg",
-  },
-  {
-    id: "p5",
-    title: "Beanie Coffee shop Redesign",
-    category: "mobile",
-    image: "/project5.jpg",
-  },
-  {
-    id: "p6",
-    title: "Chris lee brand designer portfolio",
-    category: "mobile",
-    image: "/project6.jpg",
+    link: "https://landing-cst-production.up.railway.app/",
   },
 ];
 

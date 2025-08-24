@@ -11,7 +11,7 @@ const Footer = () => (
     {/* Redes sociales */}
     <div className="flex gap-6">
       <Link
-        href="https://www.linkedin.com/in/tu-linkedin"
+        href="https://www.linkedin.com/in/nahuel-acosta-dev/"
         target="_blank"
         className="hover:text-blue-400 transition-colors"
       >
