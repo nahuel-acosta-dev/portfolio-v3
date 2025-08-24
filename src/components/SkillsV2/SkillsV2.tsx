@@ -28,8 +28,8 @@ export default function Skills() {
       name: "HTML/CSS/JS/TYPESCRIPT",
       icon: (
         <>
-          <FaHtml5 className="text-orange-500" />{" "}
-          <FaCss3Alt className="text-blue-500" />{" "}
+          <FaHtml5 className="text-orange-500" />
+          <FaCss3Alt className="text-blue-500" />
           <FaJs className="text-yellow-400" />
           <SiTypescript className="text-blue-600" />
         </>
@@ -39,7 +39,7 @@ export default function Skills() {
       name: "MUI/TAILWIND",
       icon: (
         <>
-          <SiMui className="text-sky-500" />{" "}
+          <SiMui className="text-sky-500" />
           <SiTailwindcss className="text-cyan-400" />
         </>
       ),
@@ -48,7 +48,7 @@ export default function Skills() {
       name: "REACT/NEXT",
       icon: (
         <>
-          <FaReact className="text-cyan-400" />{" "}
+          <FaReact className="text-cyan-400" />
           <SiNextdotjs className="text-white" />
         </>
       ),
@@ -57,9 +57,9 @@ export default function Skills() {
       name: "NODEJS/MONGO-DB/EXPRESS",
       icon: (
         <>
-          <FaNodeJs className="text-green-500" />{" "}
-          <SiMongodb className="text-green-600" />{" "}
-          <SiExpress className="text-gray-300" />{" "}
+          <FaNodeJs className="text-green-500" />
+          <SiMongodb className="text-green-600" />
+          <SiExpress className="text-gray-300" />
         </>
       ),
     },
@@ -68,18 +68,28 @@ export default function Skills() {
 
   return (
     <div>
-      <h3 className="mb-6 font-heading text-5xl" suppressHydrationWarning>
+      {/* tamaño responsivo y balance para que no se corte en móviles */}
+      <h3
+        className="mb-6 font-heading text-balance text-3xl sm:text-4xl md:text-5xl leading-tight"
+        suppressHydrationWarning
+      >
         {t("skills.title")}
         <span className="text-accent">.</span>
       </h3>
-      <ul className="space-y-5">
+
+      <ul className="space-y-4">
         {items.map((item) => (
           <li
             key={item.name}
-            className="flex items-center gap-3 border-l-4 border-accent/50 pl-4"
+            className="flex flex-wrap items-center gap-3 border-l-4 border-accent/50 pl-4"
           >
-            <span className="flex gap-2 text-3xl">{item.icon}</span>
-            <h5 className="font-heading text-3xl">{item.name}</h5>
+            {/* íconos no crecen, el texto puede romper línea */}
+            <span className="flex shrink-0 gap-2 text-2xl sm:text-3xl">
+              {item.icon}
+            </span>
+            <h5 className="min-w-0 font-heading text-pretty break-words [overflow-wrap:anywhere] text-xl sm:text-2xl md:text-3xl">
+              {item.name}
+            </h5>
           </li>
         ))}
       </ul>

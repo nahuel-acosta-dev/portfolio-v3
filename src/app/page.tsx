@@ -40,17 +40,13 @@ export default function Home() {
           />
         </div>
 
-        <div className="mx-auto -mt-16 max-w-7xl rounded-3xl border border-white/20 bg-white/5 shadow-[0_12px_90px_rgba(106,30,188,0.25)]">
-          {/* Achievements */}
-          {/*<Reveal className="mx-auto max-w-5xl px-4 md:px-8">
-            <Achievements />
-          </Reveal>*/}
-
-          {/* CV: dos columnas con stagger (cada hijo hace fadeUp) */}
+        <div className="mx-auto mt-0 md:-mt-16 max-w-7xl rounded-3xl border border-white/20 bg-white/5 shadow-[0_12px_90px_rgba(106,30,188,0.25)]">
           <Stagger>
             <div
               id="me"
-              className="mx-auto grid max-w-6xl gap-16 px-4 pb-24 pt-0 md:px-8 lg:grid-cols-2 scroll-mt-24 md:scroll-mt-28 mt-20"
+              className="mx-auto grid max-w-6xl gap-8 px-4 pb-16 pt-0 md:px-8 lg:grid-cols-2
+             scroll-mt-24 md:scroll-mt-28 mt-10 md:mt-20
+             text-pretty break-words [overflow-wrap:anywhere] [hyphens:auto]"
             >
               <Reveal>
                 <Timeline />
